@@ -1,9 +1,6 @@
 import axios from "axios";
 const api = axios.create({
-  baseURL:
-    (
-      import.meta.env.VITE_API_URL || "https://shop-backend-jyoh.onrender.com"
-    ).replace(/\/$/, "") + "/api",
+  baseURL: "https://shop-backend-jyoh.onrender.com".replace(/\/$/, "") + "/api",
   timeout: 30000,
 });
 api.interceptors.request.use((c) => {
